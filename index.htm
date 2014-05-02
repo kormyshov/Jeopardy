@@ -4,15 +4,18 @@
   <meta charset="utf-8">
   <title>Своя игра</title>
   <link rel="stylesheet" href="main.css">
+  <script src="scripts.js"></script>
  </head>
  <body>
 
-  <div class="first_step">
+  <div class="first_step" id="div_first_step">
    <img src="front.png">
-   <input type="text" placeholder="Введите настройки игры" />
-   <button>Начать игру</button>
+   <input type="text" placeholder="Введите настройки игры" id="text_first_step" />
+   <button onclick="start_game()">Начать игру</button>
+  </div>
 
-
+  <div class="round1" id="div_round1">
+   Hello, world!
   </div>
 
  </body>

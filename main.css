@@ -17,3 +17,7 @@ div.first_step button {
  height : 60px;
  font-size : 28px;
 }
+
+div.round1 {
+ display : none;
+}
