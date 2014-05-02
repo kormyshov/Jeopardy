@@ -1,0 +1,19 @@
+div.first_step {
+ width : 600px;
+ margin: 0 auto;
+ margin-top : 100px;
+}
+
+div.first_step img {
+ width : 600px;
+}
+
+div.first_step input {
+ width : 592px;
+}
+
+div.first_step button {
+ width : 600px;
+ height : 60px;
+ font-size : 28px;
+}
