@@ -28,3 +28,18 @@ rounds[1].points[1] = 400;
 rounds[1].points[2] = 600;
 rounds[1].points[3] = 800;
 rounds[1].points[4] = 1000;
+
+
+teams[0] = new Team();
+teams[0].name = "Экипаж 1";
+teams[0].points = 0;
+teams[1] = new Team();
+teams[1].name = "Экипаж 2";
+teams[1].points = 0;
+teams[2] = new Team();
+teams[2].name = "Экипаж 3";
+teams[2].points = 0;
+teams[3] = new Team();
+teams[3].name = "Экипаж 4";
+teams[3].points = 0;
+
