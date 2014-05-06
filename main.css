@@ -1,3 +1,7 @@
+body {
+ background-color : blue;
+}
+
 div.first_step {
  width : 600px;
  margin: 0 auto;
@@ -20,4 +24,28 @@ div.first_step button {
 
 div.round {
  display : none;
+}
+
+td.theme {
+ text-align : center;
+ color : yellow;
+ font-family : Arial;
+ font-weight : bold;
+ font-size : 56px;
+ border-left : none;
+ border-top : none;
+}
+
+td.point {
+ text-align : center;
+ color : yellow;
+ font-family : Arial;
+ font-weight : bold;
+ font-size : 56px;
+ padding-left : 20px;
+ padding-right : 20px;
+ padding-top : 10px;
+ padding-bottom : 10px;
+ border-left : none;
+ border-top : none;
 }

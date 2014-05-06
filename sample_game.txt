@@ -1,1 +1,30 @@
-var Rounds = 2;
+count_round = 2;
+
+rounds[0] = new Round();
+
+rounds[0].points[0] = 100;
+rounds[0].points[1] = 200;
+rounds[0].points[2] = 300;
+rounds[0].points[3] = 400;
+rounds[0].points[4] = 500;
+
+rounds[0].themes[0] = new Theme();
+rounds[0].themes[0].name = "Газировка";
+rounds[0].themes[1] = new Theme();
+rounds[0].themes[1].name = "Шоколад";
+rounds[0].themes[2] = new Theme();
+rounds[0].themes[2].name = "РУ";
+rounds[0].themes[3] = new Theme();
+rounds[0].themes[3].name = "Звёздные войны";
+rounds[0].themes[4] = new Theme();
+rounds[0].themes[4].name = "География";
+rounds[0].themes[5] = new Theme();
+rounds[0].themes[5].name = "Среда";
+
+rounds[1] = new Round();
+
+rounds[1].points[0] = 200;
+rounds[1].points[1] = 400;
+rounds[1].points[2] = 600;
+rounds[1].points[3] = 800;
+rounds[1].points[4] = 1000;
