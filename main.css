@@ -37,12 +37,42 @@ div.team {
  padding-right : 10px;
 }
 
+div.team div {
+ display : inline-block;
+ color : white;
+ font-size : 70px;
+ font-family : Arial;
+ font-weight : bold;
+ padding-left : 30px;
+ padding-right : 30px;
+ margin-top : -10px;
+ margin-left : -10px;
+ margin-right : -10px;
+}
+div.yes {
+ float : left;
+ background-color : green;
+}
+div.no {
+ float : right;
+ background-color : red;
+}
+
 div.team .name {
  font-size : 40px;
 }
 
 div.team .points {
  font-size : 50px;
+}
+
+div.question {
+ font-size : 64px;
+ font-family : Arial;
+ color : yellow;
+ font-weight : bold;
+ text-align : center;
+ height : 450px;
 }
 
 td.theme {

@@ -10,6 +10,18 @@ rounds[0].points[4] = 500;
 
 rounds[0].themes[0] = new Theme();
 rounds[0].themes[0].name = "Газировка";
+
+rounds[0].themes[0].questions[0] = new Question();
+rounds[0].themes[0].questions[0].value = "Официальными правами на ЭТОТ ТОВАРНЫЙ ЗНАК обладает самарский завод \"Жигулевское пиво\". Про этот напиток говорили, что он \"изготовлен из натурального экстракта деревянных человечков\".";
+rounds[0].themes[0].questions[1] = new Question();
+rounds[0].themes[0].questions[1].value = "Для того чтобы обмануть ЕГО, некоторые граждане СССР использовали леску. У автора вопроса это никогда не получалось.";
+rounds[0].themes[0].questions[2] = new Question();
+rounds[0].themes[0].questions[2].value = "ЭТОТ НАПИТОК изобретен в 1887 году тифлисским аптекарем Митрофаном Лагидзе, который добавил в газированную воду пахучий экстракт из одноименного растения семейства астровых.";
+rounds[0].themes[0].questions[3] = new Question();
+rounds[0].themes[0].questions[3].value = "ЭТО НАЗВАНИЕ было придумано во время мозгового штурма, когда управляющий предложил участниками использовать всё свое воображение.";
+rounds[0].themes[0].questions[4] = new Question();
+rounds[0].themes[0].questions[4].value = "Кот в мешке";
+
 rounds[0].themes[1] = new Theme();
 rounds[0].themes[1].name = "Шоколад";
 rounds[0].themes[2] = new Theme();

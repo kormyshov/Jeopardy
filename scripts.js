@@ -1,3 +1,22 @@
+function Question(){
+
+	this.value;
+
+	this.print = function(){
+		document.getElementById("div_round_div_table").style.display = "none";
+
+		var div = document.getElementById("div_round_div_question");
+		div.style.display = "block";
+		div.innerHTML = this.value;
+
+		var tr = document.getElementById("div_round_team");
+		for(var i=0; i<teams.length; i++){
+			tr.getElementsByTagName("div")[i*3+1].style.display = "inline-block";
+			tr.getElementsByTagName("div")[i*3+2].style.display = "inline-block";
+		}
+	}
+}
+
 function Theme(){
 	
 	this.name;
@@ -10,8 +29,10 @@ function Round(){
 	this.themes = new Array();
 	this.points = new Array();
 
-	this.print = function(num){
-		document.getElementById("div_round_header").innerHTML = "Раунд " + num;
+	this.print = function(){
+		document.getElementById("div_round_header").innerHTML = "Раунд " + (current_round+1);
+		document.getElementById("div_round_div_question").style.display = "none";
+		document.getElementById("div_round_div_table").style.display = "block";
 
 		var table = document.getElementById("div_round_table");
 
@@ -22,8 +43,11 @@ function Round(){
 		}
 
 		var tr = document.getElementById("div_round_team");
-		for(var i=0; i<teams.length; i++)
-			teams[i].print(tr.getElementsByTagName("div")[i]);
+		for(var i=0; i<teams.length; i++){
+			teams[i].print(tr.getElementsByTagName("div")[i*3]);
+			tr.getElementsByTagName("div")[i*3+1].style.display = "none";
+			tr.getElementsByTagName("div")[i*3+2].style.display = "none";
+		}
 
 	}
 
@@ -38,6 +62,27 @@ function Team(){
 		e.getElementsByTagName("span")[0].innerHTML = this.name;
 		e.getElementsByTagName("span")[1].innerHTML = this.points;
 	}
+}
+
+var Status = new Array();
+
+function print_question(i, j){
+	rounds[current_round].themes[i].questions[j].print();
+	Status[0] = i;
+	Status[1] = j;
+}
+
+function ans_yes(num){
+	teams[num].points += rounds[current_round].points[Status[1]];
+	rounds[current_round].print();
+	document.getElementById("div_round_table").getElementsByTagName("tr")[Status[0]].getElementsByTagName("td")[Status[1]+1].innerHTML = "";
+}
+
+function ans_no(num){
+	teams[num].points -= rounds[current_round].points[Status[1]];
+	teams[num].print(document.getElementById("div_round_team").getElementsByTagName("div")[num*3]);
+	document.getElementById("div_round_team").getElementsByTagName("div")[num*3+1].style.display = "none";
+	document.getElementById("div_round_team").getElementsByTagName("div")[num*3+2].style.display = "none";
 }
 
 var count_round = 0, current_round = -1;
@@ -55,9 +100,20 @@ function start_game(){
 	//alert("test2");
 	
 	var s = "";
+	s += "<table id='div_round_table' border='1' bordercolor='yellow' style='border-right : none; border-bottom : none'>";
+	for(var i=0; i<6; i++){
+		s += "<tr><td class='theme'></td>";
+		for(var j=0; j<5; j++)
+			s += "<td class='point' onclick='print_question("+i+","+j+");'></td>";
+		s += "</tr>";
+	}
+	s += "</table>";
+	document.getElementById("div_round_div_table").innerHTML = s;
+
+	s = "";
 	s += "<div id='div_round_team'>";
 	for(var i=0; i<teams.length; i++)
-		s += "<div class='team'><span class='name'></span><br><span class='points'></span></div>";
+		s += "<div class='team'><div class='yes' onclick='ans_yes("+i+");'>V</div><div class='no' onclick='ans_no("+i+");'>X</div><br><span class='name'></span><br><span class='points'></span></div>";
 	
 	s += "</div>";
 	document.getElementById("div_round_div_team").innerHTML = s;
@@ -72,5 +128,5 @@ function next_round(){
 		return ;
 	}
 
-	rounds[current_round].print(current_round+1);
+	rounds[current_round].print();
 }
