@@ -36,6 +36,7 @@ function Round(){
 
 		var table = document.getElementById("div_round_table");
 
+		if(Status[0] < 0)
 		for(var i=0; i<this.themes.length; i++){
 			table.getElementsByTagName("tr")[i].getElementsByTagName("td")[0].innerHTML = this.themes[i].name;
 			for(var j=0; j<this.points.length; j++)
@@ -64,8 +65,6 @@ function Team(){
 	}
 }
 
-var Status = new Array();
-
 function print_question(i, j){
 	rounds[current_round].themes[i].questions[j].print();
 	Status[0] = i;
@@ -86,8 +85,10 @@ function ans_no(num){
 }
 
 var count_round = 0, current_round = -1;
+var maxTime = 30;
 var rounds = new Array();
 var teams = new Array();
+var Status = new Array();
 
 function start_game(){
 	document.getElementById("div_first_step").style.display = "none";
@@ -128,5 +129,7 @@ function next_round(){
 		return ;
 	}
 
+	Status[0] = -1;
+	Status[1] = -1;
 	rounds[current_round].print();
 }

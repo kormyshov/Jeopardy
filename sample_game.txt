@@ -1,3 +1,5 @@
+maxTime = 30;
+
 count_round = 2;
 
 rounds[0] = new Round();
@@ -24,14 +26,74 @@ rounds[0].themes[0].questions[4].value = "Кот в мешке";
 
 rounds[0].themes[1] = new Theme();
 rounds[0].themes[1].name = "Шоколад";
+
+rounds[0].themes[1].questions[0] = new Question();
+rounds[0].themes[1].questions[0].value = "Именно этот континент стал родиной шоколада.";
+rounds[0].themes[1].questions[1] = new Question();
+rounds[0].themes[1].questions[1].value = "Именно он был первым европейцем, который попробовал шоколад.";
+rounds[0].themes[1].questions[2] = new Question();
+rounds[0].themes[1].questions[2].value = "Именно этот продукт в середине XIX века швейцарец Даниель Питер добавил к шоколаду.";
+rounds[0].themes[1].questions[3] = new Question();
+rounds[0].themes[1].questions[3].value = "Именно в этом городе впервые сделали плиточный шоколад.";
+rounds[0].themes[1].questions[4] = new Question();
+rounds[0].themes[1].questions[4].value = "Среднестатистический житель именно этой страны ест больше всего шоколада.";
+
 rounds[0].themes[2] = new Theme();
-rounds[0].themes[2].name = "РУ";
+rounds[0].themes[2].name = "-РУ-";
+
+rounds[0].themes[2].questions[0] = new Question();
+rounds[0].themes[2].questions[0].value = "У нас ОН левый, а вот в Англии и Японии правый.";
+rounds[0].themes[2].questions[1] = new Question();
+rounds[0].themes[2].questions[1].value = "Если у цилиндра убрать все существующие плоскости, то получится...";
+rounds[0].themes[2].questions[2] = new Question();
+rounds[0].themes[2].questions[2].value = "Именно ТАК называется процесс, когда человеку целый день очень сильно везет.";
+rounds[0].themes[2].questions[3] = new Question();
+rounds[0].themes[2].questions[3].value = "В этой стране есть гора с одноименным названием, река Санага, и столица Яунде.";
+rounds[0].themes[2].questions[4] = new Question();
+rounds[0].themes[2].questions[4].value = "ОН проводил политику \"позитивного нейтралитета\" и выступал за всемерное развитие дружбы между Советским Союзом и Индией.";
+
 rounds[0].themes[3] = new Theme();
 rounds[0].themes[3].name = "Звёздные войны";
+
+rounds[0].themes[3].questions[0] = new Question();
+rounds[0].themes[3].questions[0].value = "Кого захватила армия генерала Гривуса в начале третьего эпизода?";
+rounds[0].themes[3].questions[1] = new Question();
+rounds[0].themes[3].questions[1].value = "Таким образом Хан пытался согреть Люка в снегах Хотха?";
+rounds[0].themes[3].questions[2] = new Question();
+rounds[0].themes[3].questions[2].value = "В послании принцессы Леи именно он был назван последней надеждой?";
+rounds[0].themes[3].questions[3] = new Question();
+rounds[0].themes[3].questions[3].value = "Такое название имела основная денежная единица Галактической республики?";
+rounds[0].themes[3].questions[4] = new Question();
+rounds[0].themes[3].questions[4].value = "При правлении этого канцлера начинаются действия первого эпизода?";
+
 rounds[0].themes[4] = new Theme();
 rounds[0].themes[4].name = "География";
+
+rounds[0].themes[4].questions[0] = new Question();
+rounds[0].themes[4].questions[0].value = "Все живое, попадая в это озеро на Сицилии, погибает, поэтому ему дали соответствующее название. Какое?";
+rounds[0].themes[4].questions[1] = new Question();
+rounds[0].themes[4].questions[1].value = "Назовите итальянский город, который прославило недостроенное архитектурное сооружение?";
+rounds[0].themes[4].questions[2] = new Question();
+rounds[0].themes[4].questions[2].value = "Щит на гербе Австралии держат два местных животных- справа кенгуру, слева... А кто слева?";
+rounds[0].themes[4].questions[3] = new Question();
+rounds[0].themes[4].questions[3].value = "Когда он разливается, то вода становится сначала зеленой, а затем красной, а земля, по которой он протекает, получила у местных жителей название «Черная». О чем речь?";
+rounds[0].themes[4].questions[4] = new Question();
+rounds[0].themes[4].questions[4].value = "Что означает поднятый флаг над Букингемским дворцом в Лондоне?";
+
 rounds[0].themes[5] = new Theme();
 rounds[0].themes[5].name = "Среда";
+
+rounds[0].themes[5].questions[0] = new Question();
+rounds[0].themes[5].questions[0].value = "Именно ПО ЭТОЙ ПРИЧИНЕ литературный кружок, объединявший Горького, Бунина, Куприна и других писателей, назывался \"Среда\".";
+rounds[0].themes[5].questions[1] = new Question();
+rounds[0].themes[5].questions[1].value = "У астрологов среда считается беспокойным днем, потому что среде покровительствует ЭТА ПЛАНЕТА.";
+rounds[0].themes[5].questions[2] = new Question();
+rounds[0].themes[5].questions[2].value = "\"День рождения — среда, значит, ждет тебя беда\", — пропел Майкл Бэнкс. Именно поэтому, по мнению Майкла, его сестре Джейн вместо риса досталось ЭТО БЛЮДО.";
+rounds[0].themes[5].questions[3] = new Question();
+rounds[0].themes[5].questions[3].value = "В юмористическом Арфографическом словаре слово \"перепел\" означает \"ремикс\", а ЭТО СЛОВО определяется как \"принимающий по средам\".";
+rounds[0].themes[5].questions[4] = new Question();
+rounds[0].themes[5].questions[4].value = "Для воздуха ЭТОТ ПОКАЗАТЕЛЬ практически равен единице, для воды — 1,33, а для алмаза — 2,4.";
+
 
 rounds[1] = new Round();
 
