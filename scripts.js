@@ -80,7 +80,9 @@ function print_question(i, j){
 function printTimer(){
 	Status[2]--;
 	if(Status[2] <= 0) clearInterval(Status[3]);
-	document.getElementById("div_question_timer").innerHTML = ""+Status[2];
+	var s = "";
+	if(Status[2] < 10) s += "0";
+	document.getElementById("div_question_timer").innerHTML = s+Status[2];
 }
 
 function ans_yes(num){
@@ -114,7 +116,7 @@ function start_game(){
 	//alert("test2");
 	
 	var s = "";
-	s += "<table id='div_round_table' border='1' bordercolor='yellow' style='border-right : none; border-bottom : none'>";
+	s += "<table id='div_round_table' class='div_round_div_table'>";
 	for(var i=0; i<6; i++){
 		s += "<tr><td class='theme'></td>";
 		for(var j=0; j<5; j++)
@@ -127,7 +129,7 @@ function start_game(){
 	s = "";
 	s += "<div id='div_round_team'>";
 	for(var i=0; i<teams.length; i++)
-		s += "<div class='team'><div class='yes' onclick='ans_yes("+i+");'>V</div><div class='no' onclick='ans_no("+i+");'>X</div><br><span class='name'></span><br><span class='points'></span></div>";
+		s += "<div class='team'><div class='yes' onclick='ans_yes("+i+");'>V</div><div class='no' onclick='ans_no("+i+");'>X</div><span class='name'></span><span class='points'></span></div>";
 	
 	s += "</div>";
 	document.getElementById("div_round_div_team").innerHTML = s;

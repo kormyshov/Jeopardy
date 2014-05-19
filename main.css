@@ -1,11 +1,12 @@
 body {
- background-color : blue;
+ background-color : #777;
 }
 
 div.first_step {
- width : 600px;
+ width : 620px;
  margin: 0 auto;
- margin-top : 100px;
+ margin-top : 150px;
+ text-align : center;
 }
 
 div.first_step img {
@@ -13,11 +14,11 @@ div.first_step img {
 }
 
 div.first_step input {
- width : 592px;
+ width : 610px;
 }
 
 div.first_step button {
- width : 600px;
+ width : 620px;
  height : 60px;
  font-size : 28px;
 }
@@ -28,14 +29,12 @@ div.round {
 
 div.team {
  display : inline-block;
- background-color : gray;
+ background-color : yellow;
  margin-left : 20px;
  margin-right : 20px;
- padding-top : 10px;
- padding-bottom : 10px;
- padding-left : 10px;
- padding-right : 10px;
+ padding : 0px;
  text-align : center;
+ border : 2px solid blue;
 }
 
 div.team div {
@@ -46,9 +45,6 @@ div.team div {
  font-weight : bold;
  padding-left : 30px;
  padding-right : 30px;
- margin-top : -10px;
- margin-left : -10px;
- margin-right : -10px;
 }
 div.yes {
  float : left;
@@ -60,7 +56,12 @@ div.no {
 }
 
 div.team .name {
+ display : block;
  font-size : 40px;
+ margin-top : 0px;
+ background-color : blue;
+ color : yellow;
+ padding : 5px;
 }
 
 div.team .points {
@@ -78,11 +79,41 @@ div.question {
 
 div.timer {
  float : right;
- font-size : 50px;
+ font-family : Courier New, monospace;
+ font-size : 90px;
+ font-weight : bold;
  color : red;
  display : none;
  width : 100px;
  text-align : center;
+}
+
+div.div_button {
+ width : 50px;
+ text-align : center;
+ font-size : 80px;
+ font-family : Courier New, monospace;
+ font-weight : bold;
+ display : inline-block;
+}
+div.div_button:hover {
+ color : blue;
+}
+
+span.start_header {
+ font-family : Courier New, monospace;
+ font-size : 150px;
+ font-weight : bold;
+ background-color : blue;
+ padding : 0px 30px;
+}
+
+table.div_round_div_table {
+ background-color: #777;
+}
+
+table.div_round_div_table tr:hover {
+ background-color: #aaa;
 }
 
 td.theme {
@@ -91,7 +122,9 @@ td.theme {
  font-family : Arial;
  font-weight : bold;
  font-size : 56px;
+ border : 2px solid blue;
  border-left : none;
+ border-right : none;
  border-top : none;
 }
 
@@ -103,8 +136,23 @@ td.point {
  font-size : 56px;
  padding-left : 20px;
  padding-right : 20px;
- padding-top : 10px;
- padding-bottom : 10px;
+ padding-top : 8px;
+ padding-bottom : 8px;
+ border : 2px solid blue;
  border-left : none;
+ border-right : none;
  border-top : none;
+}
+
+td.point:hover {
+ background-color : blue;
+}
+
+div.round h1 {
+ font-family : Courier New, monospace;
+ font-size : 50px;
+ font-weight : bold;
+ background-color : blue;
+ padding : 10px 0px;
+ margin : -10px -10px 0px;
 }
