@@ -104,6 +104,17 @@ function ans_no(num){
 	document.getElementById("div_round_team").getElementsByTagName("div")[num*3+2].style.display = "none";
 }
 
+function click_back(){
+	rounds[current_round].print();
+	clearInterval(Status[3]);
+}
+
+function click_forw(){
+	rounds[current_round].print();
+	document.getElementById("div_round_table").getElementsByTagName("tr")[Status[0]].getElementsByTagName("td")[Status[1]+1].innerHTML = "";
+	clearInterval(Status[3]);
+}
+
 var count_round = 0, current_round = -1;
 var maxTime = 30;
 var rounds = new Array();
