@@ -169,3 +169,9 @@ function next_round(){
 	Status[1] = -1;
 	rounds[current_round].print();
 }
+
+function end_game(){
+	document.getElementById("div_round").style.display = "none";
+	document.getElementById("div_end_game").style.display = "block";
+	document.getElementById("div_end_div_team").innerHTML = document.getElementById("div_round_div_team").innerHTML;
+}
