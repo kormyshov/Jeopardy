@@ -20,7 +20,6 @@ function Question(){
 		Status[3] = setInterval("printTimer();", 1000);
 
 		document.getElementById("div_question_back").style.display = "inline-block";
-		document.getElementById("div_question_forw").style.display = "inline-block";
 	}
 }
 
@@ -41,7 +40,6 @@ function Round(){
 		document.getElementById("div_round_div_question").style.display = "none";
 		document.getElementById("div_question_timer").style.display = "none";
 		document.getElementById("div_question_back").style.display = "none";
-		document.getElementById("div_question_forw").style.display = "none";
 		document.getElementById("div_round_div_table").style.display = "block";
 
 		var table = document.getElementById("div_round_table");
@@ -95,6 +93,7 @@ function ans_yes(num){
 	rounds[current_round].print();
 	document.getElementById("div_round_table").getElementsByTagName("tr")[Status[0]].getElementsByTagName("td")[Status[1]+1].innerHTML = "";
 	clearInterval(Status[3]);
+	Status[1] = -1;
 }
 
 function ans_no(num){
@@ -107,12 +106,18 @@ function ans_no(num){
 function click_back(){
 	rounds[current_round].print();
 	clearInterval(Status[3]);
+	Status[1] = -1;
 }
 
 function click_forw(){
+	if(Status[1] < 0){
+		next_round();
+		return ;
+	}
 	rounds[current_round].print();
 	document.getElementById("div_round_table").getElementsByTagName("tr")[Status[0]].getElementsByTagName("td")[Status[1]+1].innerHTML = "";
 	clearInterval(Status[3]);
+	Status[1] = -1;
 }
 
 var count_round = 0, current_round = -1;

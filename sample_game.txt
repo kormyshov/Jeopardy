@@ -103,6 +103,90 @@ rounds[1].points[2] = 600;
 rounds[1].points[3] = 800;
 rounds[1].points[4] = 1000;
 
+rounds[1].themes[0] = new Theme();
+rounds[1].themes[0].name = "<span style='font-size : 40px;'>Европейская мозаика</span>";
+
+rounds[1].themes[0].questions[0] = new Question();
+rounds[1].themes[0].questions[0].value = "В какой европейской стране чая пьют больше всех в мире: 1800 чашек в год на человека, включая младенцев?";
+rounds[1].themes[0].questions[1] = new Question();
+rounds[1].themes[0].questions[1].value = "Кот в мешке";
+rounds[1].themes[0].questions[2] = new Question();
+rounds[1].themes[0].questions[2].value = "Рим расположен на семи холмах. Назовите самый знаменитый из них.";
+rounds[1].themes[0].questions[3] = new Question();
+rounds[1].themes[0].questions[3].value = "Какая европейская страна является родиной часов с кукушкой?";
+rounds[1].themes[0].questions[4] = new Question();
+rounds[1].themes[0].questions[4].value = "О каком европейском городе французский классик Стендаль писал: \"Красота ее дворцов превосходит все, что знает Париж?\"";
+
+rounds[1].themes[1] = new Theme();
+rounds[1].themes[1].name = "История";
+
+rounds[1].themes[1].questions[0] = new Question();
+rounds[1].themes[1].questions[0].value = "Он спал 33 года, а потом проснулся и даже угодил на знаменитую картину В.М.Васнецова. Кто это?";
+rounds[1].themes[1].questions[1] = new Question();
+rounds[1].themes[1].questions[1].value = "Раньше там жили индейцы, а сейчас это самая густонаселенная испаноязычная страна мира. Какая?";
+rounds[1].themes[1].questions[2] = new Question();
+rounds[1].themes[1].questions[2].value = "Кот в мешке";
+rounds[1].themes[1].questions[3] = new Question();
+rounds[1].themes[1].questions[3].value = "За всю историю существования Военного ордена Победоносца Георгия, полных его кавалеров было четверо. Все они фельдмаршалы:  М.Б. Барклай-де-Толли, И.Ф. Паскевич- Эриванский, И.И.Дибич-Забалканский и ... Кто еще?";
+rounds[1].themes[1].questions[4] = new Question();
+rounds[1].themes[1].questions[4].value = "Последний год Первой мировой войны положил начало еще одной общеевропейской трагедии, приведшей к гибели почти в пять раз большего количества людей, чем в годы самой войны. Что это было?";
+
+rounds[1].themes[2] = new Theme();
+rounds[1].themes[2].name = "-УМ-";
+
+rounds[1].themes[2].questions[0] = new Question();
+rounds[1].themes[2].questions[0].value = "Он нашел себе \"двухголового\" друга, от которого пахло молоком, а озвучила обоих Клара Румянова";
+rounds[1].themes[2].questions[1] = new Question();
+rounds[1].themes[2].questions[1].value = "В этой телепередаче зеленая дорожка была самой длинной, но на ней можно было ошибиться дважды";
+rounds[1].themes[2].questions[2] = new Question();
+rounds[1].themes[2].questions[2].value = "Ее называют одной из самых интеллектуальных звезд Голливуда, а всеобщее признание она приобрела после съемок в \"Криминальном чтиве\"";
+rounds[1].themes[2].questions[3] = new Question();
+rounds[1].themes[2].questions[3].value = "Эту благородную кошку Нового Света называют кугуар или \"серебряный лев\", но нам о ней, скорее, напомнит производитель спорттоваров.";
+rounds[1].themes[2].questions[4] = new Question();
+rounds[1].themes[2].questions[4].value = "В немецком и скандинавских языках его часто можно встретить над некоторыми гласными";
+
+rounds[1].themes[3] = new Theme();
+rounds[1].themes[3].name = "Королева детектива";
+
+rounds[1].themes[3].questions[0] = new Question();
+rounds[1].themes[3].questions[0].value = "Национальность Эркюля Пуаро";
+rounds[1].themes[3].questions[1] = new Question();
+rounds[1].themes[3].questions[1].value = "\"Восточный экспресс\" следовал из пункта А в пункт Б. Назовите оба";
+rounds[1].themes[3].questions[2] = new Question();
+rounds[1].themes[3].questions[2].value = "Фамилия этого детектива переводится просто — \"голубь\".";
+rounds[1].themes[3].questions[3] = new Question();
+rounds[1].themes[3].questions[3].value = "По мнению Агаты Кристи именно эти родственники шутят наиболее остроумно и находчиво";
+rounds[1].themes[3].questions[4] = new Question();
+rounds[1].themes[3].questions[4].value = "Кот в мешке";
+
+rounds[1].themes[4] = new Theme();
+rounds[1].themes[4].name = "Гей";
+
+rounds[1].themes[4].questions[0] = new Question();
+rounds[1].themes[4].questions[0].value = "Кот в мешке";
+rounds[1].themes[4].questions[1] = new Question();
+rounds[1].themes[4].questions[1].value = "Когда двое играют в большой теннис, то меняются подачей каждый...";
+rounds[1].themes[4].questions[2] = new Question();
+rounds[1].themes[4].questions[2].value = "Он обладает чем-то мягким и очень маленьким, но сумел сколотить на этом миллиарды";
+rounds[1].themes[4].questions[3] = new Question();
+rounds[1].themes[4].questions[3].value = "Острова Тасос, Самос и Лесбос расположены именно в этом море";
+rounds[1].themes[4].questions[4] = new Question();
+rounds[1].themes[4].questions[4].value = "Он в буквальном смысле прыгнул выше головы. В родном городе ему поставили памятник, а всеми своими успехами он обязан некоему предмету длиной в 5м.";
+
+rounds[1].themes[5] = new Theme();
+rounds[1].themes[5].name = "<span style='font-size : 40px;'>Умный язык голову кормит</span>";
+
+rounds[1].themes[5].questions[0] = new Question();
+rounds[1].themes[5].questions[0].value = "На языке хантов \"кет\" - сердце, а \"сэм\" - рука. Переведите на русский язык слово \"кетсэм\".";
+rounds[1].themes[5].questions[1] = new Question();
+rounds[1].themes[5].questions[1].value = "Узбеки дают очень точные и красочные прозвища. Например, \"шайтан-арба\" - среднеазиатская железная дорога. А кого узбеки называют \"колотун-бабай\"?";
+rounds[1].themes[5].questions[2] = new Question();
+rounds[1].themes[5].questions[2].value = "У стула и стола их четыре, у дивана - пять, а у кресла - шесть. О чем идет речь?";
+rounds[1].themes[5].questions[3] = new Question();
+rounds[1].themes[5].questions[3].value = "В прилагательном \"длинношеее\" пишутся три буквы \"Е\" подряд. Назовите существительное, в котором также пишутся подряд три \"Е\".";
+rounds[1].themes[5].questions[4] = new Question();
+rounds[1].themes[5].questions[4].value = "\"Как варят соус «тортю»?\"; \"Что у меня в руке?\"; \"Любит ли Тильда Джона?\"; \"Объясните течение звезд и прочие планеты\" - эти вопросы были заданы одному герою Александра Грина из-за его татуировки, состоящей из трех слов. Назовите эти слова.";
+
 
 teams[0] = new Team();
 teams[0].name = "Экипаж 1";

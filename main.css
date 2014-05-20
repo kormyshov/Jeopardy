@@ -94,7 +94,7 @@ div.div_button {
  font-size : 80px;
  font-family : Courier New, monospace;
  font-weight : bold;
- display : none;
+ display : inline-block;
 }
 div.div_button:hover {
  color : blue;
