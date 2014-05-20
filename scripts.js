@@ -18,6 +18,9 @@ function Question(){
 		document.getElementById("div_question_timer").style.display = "block";
 		document.getElementById("div_question_timer").innerHTML = ""+maxTime;
 		Status[3] = setInterval("printTimer();", 1000);
+
+		document.getElementById("div_question_back").style.display = "inline-block";
+		document.getElementById("div_question_forw").style.display = "inline-block";
 	}
 }
 
@@ -37,6 +40,8 @@ function Round(){
 		document.getElementById("div_round_header").innerHTML = "Раунд " + (current_round+1);
 		document.getElementById("div_round_div_question").style.display = "none";
 		document.getElementById("div_question_timer").style.display = "none";
+		document.getElementById("div_question_back").style.display = "none";
+		document.getElementById("div_question_forw").style.display = "none";
 		document.getElementById("div_round_div_table").style.display = "block";
 
 		var table = document.getElementById("div_round_table");
