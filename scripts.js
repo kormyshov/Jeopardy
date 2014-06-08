@@ -1,13 +1,40 @@
+function Cat(){
+
+	this.theme;
+	this.question1;
+	this.question2;
+
+	this.print = function(){
+
+		var div = document.getElementById("div_round_div_question");
+		var str = "";
+		str += "<div class='div_cat' onclick='rounds["+current_round+"].themes["+Status[0]+"].questions["+Status[1]+"].value.printQ(1)'>"+rounds[current_round].points[0]+"</div>";
+		str += "<div class='div_cat' onclick='rounds["+current_round+"].themes["+Status[0]+"].questions["+Status[1]+"].value.printQ(2)'>"+rounds[current_round].points[rounds[current_round].points.length-1]+"</div>";
+		div.innerHTML = str;
+		div.style.display = "block";
+	}
+
+	this.printQ = function(num){
+		var div = document.getElementById("div_round_div_question");
+		div.style.display = "block";
+		Status[4] = 0;
+		if(num == 1) div.innerHTML = this.question1;
+		else{
+			div.innerHTML = this.question2;
+			Status[4] = rounds[current_round].points.length-1;
+		}
+		Status[1] += 10;
+
+		Status[3] = setInterval("printTimer();", 1000);
+	}
+}
+
 function Question(){
 
 	this.value;
 
 	this.print = function(){
 		document.getElementById("div_round_div_table").style.display = "none";
-
-		var div = document.getElementById("div_round_div_question");
-		div.style.display = "block";
-		div.innerHTML = this.value;
 
 		var tr = document.getElementById("div_round_team");
 		for(var i=0; i<teams.length; i++){
@@ -17,9 +44,18 @@ function Question(){
 
 		document.getElementById("div_question_timer").style.display = "block";
 		document.getElementById("div_question_timer").innerHTML = ""+maxTime;
-		Status[3] = setInterval("printTimer();", 1000);
 
 		document.getElementById("div_question_back").style.display = "inline-block";
+
+		if(typeof(this.value) == "string"){
+			var div = document.getElementById("div_round_div_question");
+			div.style.display = "block";
+			div.innerHTML = this.value;
+
+			Status[3] = setInterval("printTimer();", 1000);
+		}else{
+			this.value.print();
+		}
 	}
 }
 
@@ -89,7 +125,12 @@ function printTimer(){
 }
 
 function ans_yes(num){
-	teams[num].points += rounds[current_round].points[Status[1]];
+	if(Status[1]<10)
+		teams[num].points += rounds[current_round].points[Status[1]];
+	else
+		teams[num].points += rounds[current_round].points[Status[4]];
+	Status[1] %= 10;
+
 	rounds[current_round].print();
 	document.getElementById("div_round_table").getElementsByTagName("tr")[Status[0]].getElementsByTagName("td")[Status[1]+1].innerHTML = "";
 	clearInterval(Status[3]);
@@ -97,7 +138,11 @@ function ans_yes(num){
 }
 
 function ans_no(num){
-	teams[num].points -= rounds[current_round].points[Status[1]];
+	if(Status[1]<10)
+		teams[num].points -= rounds[current_round].points[Status[1]];
+	else
+		teams[num].points -= rounds[current_round].points[Status[4]];
+
 	teams[num].print(document.getElementById("div_round_team").getElementsByTagName("div")[num*3]);
 	document.getElementById("div_round_team").getElementsByTagName("div")[num*3+1].style.display = "none";
 	document.getElementById("div_round_team").getElementsByTagName("div")[num*3+2].style.display = "none";
@@ -115,7 +160,7 @@ function click_forw(){
 		return ;
 	}
 	rounds[current_round].print();
-	document.getElementById("div_round_table").getElementsByTagName("tr")[Status[0]].getElementsByTagName("td")[Status[1]+1].innerHTML = "";
+	document.getElementById("div_round_table").getElementsByTagName("tr")[Status[0]].getElementsByTagName("td")[Status[1]%10+1].innerHTML = "";
 	clearInterval(Status[3]);
 	Status[1] = -1;
 }

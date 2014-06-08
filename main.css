@@ -27,6 +27,14 @@ div.round {
  display : none;
 }
 
+div.div_cat {
+ display : inline-block;
+ background-color : red;
+ width : 300px;
+ margin : 100px;
+ padding : 20px;
+}
+
 div.team {
  display : inline-block;
  background-color : yellow;
