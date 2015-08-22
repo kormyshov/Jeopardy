@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Своя игра (создание)</title>
+  <link rel="stylesheet" href="create_game.css">
+ </head>
+ <script>
+
+	 function get_simple_question(round, theme, num){
+
+		 var str = "";
+
+		 str += "<h5>Вопрос "+(num+1)+"</h5>";
+		 str += "<input type=\"hidden\" id=\"hid"+round+theme+num+"\" value=\"0\">";
+		 str += "<input type=\"text\" id=\"q"+(round)+(theme)+(num)+"\" class=\"biggest\">";
+		 str += "<span>Размер шрифта:</span><input type=\"text\" id=\"sz"+(round)+(theme)+(num)+"\" value=\"64\"><br>";
+
+		 document.getElementById("div_q"+round+theme+num).innerHTML = str;
+	 }
+
+	 function get_cat_question(round, theme, num){
+
+		 var str = "";
+
+		 str += "<h5>Вопрос "+(num+1)+" (кот в мешке)</h5>";
+		 str += "<input type=\"hidden\" id=\"hid"+round+theme+num+"\" value=\"1\">";
+		 str += "<span>Тема:</span>";
+		 str += "<input type=\"text\" id=\"thq"+round+theme+num+"\" class=\"big\"><br>";
+		 str += "<input type=\"text\" id=\"q"+(round)+(theme)+(num)+"1\" class=\"biggest\">";
+		 str += "<span>Размер шрифта:</span><input type=\"text\" id=\"sz"+(round)+(theme)+(num)+"1\" value=\"64\"><br>";
+		 str += "<input type=\"text\" id=\"q"+(round)+(theme)+(num)+"2\" class=\"biggest\">";
+		 str += "<span>Размер шрифта:</span><input type=\"text\" id=\"sz"+(round)+(theme)+(num)+"2\" value=\"64\"><br>";
+
+		 document.getElementById("div_q"+round+theme+num).innerHTML = str;
+	 }
+
+	 function get_question(round, theme, num){
+
+		 var str = "";
+
+		 str += "<div id=\"div_q"+round+theme+num+"\">";
+
+		 str += "<h5>Вопрос "+(num+1)+"</h5>";
+		 str += "<input type=\"button\" value=\"Обычный\" OnClick=\"get_simple_question("+round+","+theme+","+num+")\" class=\"mid\">";
+		 str += "<input type=\"button\" value=\"Кот в мешке\" OnClick=\"get_cat_question("+round+","+theme+","+num+")\" class=\"mid\">";
+
+		 str += "</div>";
+	 	 return str;
+	 }
+
+	 function get_theme(round, num){
+
+		 var str = "";
+
+		 str += "<h4>Тема "+(num+1)+"</h4>";
+		 str += "<span>Название:</span><input type=\"text\" id=\"th"+(round)+(num)+"\" class=\"big\">";
+		 str += "<span>Размер шрифта:</span><input type=\"text\" id=\"sz"+(round)+(num)+"\" value=\"56\"><br>";
+
+		 for(var i=0; i<5; i++)
+		 	str += get_question(round, num, i);
+
+		 return str;
+	 }
+
+	 function get_round(num){
+
+		 var str = "";
+		 str += "<div>";
+		 str += "<h3>Раунд "+(num+1)+"</h3>";
+
+		 str += "<span>Стоимость вопросов:</span><br>";
+		 str += "<input type=\"text\" id=\"p"+num+"0\" value=\""+(100*(num+1))+"\">";
+		 str += "<input type=\"text\" id=\"p"+num+"1\" value=\""+(200*(num+1))+"\">";
+		 str += "<input type=\"text\" id=\"p"+num+"2\" value=\""+(300*(num+1))+"\">";
+		 str += "<input type=\"text\" id=\"p"+num+"3\" value=\""+(400*(num+1))+"\">";
+		 str += "<input type=\"text\" id=\"p"+num+"4\" value=\""+(500*(num+1))+"\">";
+
+		 str += "<br><br>";
+
+		 for(var i=0; i<6; i++)
+			 str += get_theme(num, i);
+
+		 str += "</div>";
+
+		 return str;
+	 }
+
+	 function gen1(){
+
+		 var str = "";
+		 var num = document.getElementById("round_number").value;
+		 for(var i=0; i<num; i++)
+		 	str += get_round(i);
+
+		str += "<br><br><input type=\"button\" value=\"Сгенерировать код\" OnClick=\"gen2()\" class=\"big\"><br><textarea id=\"result\" rows=\"16\" cols=\"128\"></textarea>";
+
+		document.getElementById("rounds").innerHTML = str;
+	 }
+
+	 function gen(){
+		var str = "";
+		var num = document.getElementById("team_number").value;
+		for(var i=0; i<num; i++)
+			str += "<div><h3>Команда "+(i+1)+"</h3><span>Название:</span><input type=\"text\" id=\"team"+i+"\" class=\"big\"> <span>Баллы:</span><input type=\"text\" id=\"point"+i+"\" value=\"0\"></div>";
+
+			str += "<br><br><span>Введите количество раундов:</span><input type=\"text\" id=\"round_number\" value=\"2\"><input type=\"button\" value=\"Далее\" OnClick=\"gen1()\" class=\"mid\">";
+
+		document.getElementById("teams").innerHTML = str;
+	 }
+
+	 function gen2(){
+
+		var str = "";
+
+		var count_team = document.getElementById("team_number").value;
+		for(var i=0; i<count_team; i++){
+			str += "teams["+i+"] = new Team();\n";
+			str += "teams["+i+"].name = \""+(document.getElementById("team"+i).value.replace(/\"/g, "\\\""))+"\";\n";
+			str += "teams["+i+"].points = "+(document.getElementById("point"+i).value)+";\n";
+		}
+
+		str += "\n\n";
+
+		str += "maxTime = "+(document.getElementById("count_sec").value)+";\n\n";
+
+		var count_round = document.getElementById("round_number").value;
+		str += "count_round = "+count_round+";\n\n";
+
+		for(var i=0; i<count_round; i++){
+
+			str += "rounds["+i+"] = new Round();\n\n";
+
+			for(var j=0; j<5; j++)
+				str += "rounds["+i+"].points["+j+"] = "+(document.getElementById("p"+i+j).value)+";\n";
+			str += "\n";
+
+
+			for(var j=0; j<6; j++){
+
+				str += "rounds["+i+"].themes["+j+"] = new Theme();\n";
+				if(document.getElementById("sz"+i+j).value == "56")
+					str += "rounds["+i+"].themes["+j+"].name = \""+(document.getElementById("th"+i+j).value.replace(/\"/g, "\\\""))+"\";\n\n";
+				else
+					str += "rounds["+i+"].themes["+j+"].name = \"<span style='font-size : "+(document.getElementById("sz"+i+j).value)+"px;'>"+(document.getElementById("th"+i+j).value.replace(/\"/g, "\\\""))+"</span>\";\n\n";
+
+
+				for(var k=0; k<5; k++){
+
+					str += "rounds["+i+"].themes["+j+"].questions["+k+"] = new Question();\n";
+					if(document.getElementById("hid"+i+j+k).value == "0")
+						if(document.getElementById("sz"+i+j+k).value == "64")
+							str += "rounds["+i+"].themes["+j+"].questions["+k+"].value = \""+(document.getElementById("q"+i+j+k).value.replace(/\"/g, "\\\""))+"\";\n";
+						else
+							str += "rounds["+i+"].themes["+j+"].questions["+k+"].value = \"<span style='font-size : "+(document.getElementById("sz"+i+j+k).value)+"px;'>"+(document.getElementById("q"+i+j+k).value.replace(/\"/g, "\\\""))+"</span>\";\n";
+					else{
+						str += "rounds["+i+"].themes["+j+"].questions["+k+"].value = new Cat();\n";
+						str += "rounds["+i+"].themes["+j+"].questions["+k+"].value.theme = \""+(document.getElementById("thq"+i+j+k).value.replace(/\"/g, "\\\""))+"\";\n";
+
+						if(document.getElementById("sz"+i+j+k+"1").value == "64")
+							str += "rounds["+i+"].themes["+j+"].questions["+k+"].value.question1 = \""+(document.getElementById("q"+i+j+k+"1").value.replace(/\"/g, "\\\""))+"\";\n";
+						else
+							str += "rounds["+i+"].themes["+j+"].questions["+k+"].value.question1 = \"<span style='font-size : "+(document.getElementById("sz"+i+j+k+"1").value)+"px;'>"+(document.getElementById("q"+i+j+k+"1").value.replace(/\"/g, "\\\""))+"</span>\";\n";
+
+						if(document.getElementById("sz"+i+j+k+"2").value == "64")
+							str += "rounds["+i+"].themes["+j+"].questions["+k+"].value.question2 = \""+(document.getElementById("q"+i+j+k+"2").value.replace(/\"/g, "\\\""))+"\";\n";
+						else
+							str += "rounds["+i+"].themes["+j+"].questions["+k+"].value.question2 = \"<span style='font-size : "+(document.getElementById("sz"+i+j+k+"2").value)+"px;'>"+(document.getElementById("q"+i+j+k+"2").value.replace(/\"/g, "\\\""))+"</span>\";\n";
+					}
+				}
+
+				str += "\n";
+			}
+		}
+
+		document.getElementById("result").value = str;
+	 }
+ </script>
+ <body>
+
+	 <h1>Создание игры</h1>
+
+	 <span>Введите количество секунд на один вопрос:</span>
+	 <input type="text" id="count_sec" value="30"><br>
+	 <span>Введите количество команд:</span>
+	 <input type="text" id="team_number" value="4">
+	 <input type="button" value="Далее" OnClick="gen()" class="mid">
+
+	 <div id="teams"></div>
+	 <div id="rounds"></div>
+
+ </body>
+</html>
