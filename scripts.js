@@ -165,11 +165,37 @@ function click_forw(){
 	Status[1] = -1;
 }
 
+function click_switch_count(){
+
+	var tr = document.getElementById("div_round_team");
+	if(!switch_count){
+
+		for(var i=0; i<teams.length; i++)
+			tr.getElementsByTagName("div")[i*3].getElementsByTagName("span")[1].className = "points";
+
+		document.getElementById("div_switch_count").innerHTML = "x";
+		switch_count = true;
+	}else{
+
+		for(var i=0; i<teams.length; i++)
+			tr.getElementsByTagName("div")[i*3].getElementsByTagName("span")[1].className = "hide_points";
+
+		document.getElementById("div_switch_count").innerHTML = "o";
+		switch_count = false;
+	}
+}
+
+function show_count(){
+
+	if(!switch_count) click_switch_count();
+}
+
 var count_round = 0, current_round = -1;
 var maxTime = 30;
 var rounds = new Array();
 var teams = new Array();
 var Status = new Array();
+var switch_count = false;
 
 function start_game(){
 	document.getElementById("div_first_step").style.display = "none";
@@ -195,7 +221,7 @@ function start_game(){
 	s = "";
 	s += "<div id='div_round_team'>";
 	for(var i=0; i<teams.length; i++)
-		s += "<div class='team'><div class='yes' onclick='ans_yes("+i+");'>V</div><div class='no' onclick='ans_no("+i+");'>X</div><span class='name'></span><span class='points'></span></div>";
+		s += "<div class='team'><div class='yes' onclick='ans_yes("+i+");'>V</div><div class='no' onclick='ans_no("+i+");'>X</div><span class='name'></span><span class='hide_points'></span></div>";
 	
 	s += "</div>";
 	document.getElementById("div_round_div_team").innerHTML = s;
@@ -218,5 +244,6 @@ function next_round(){
 function end_game(){
 	document.getElementById("div_round").style.display = "none";
 	document.getElementById("div_end_game").style.display = "block";
+	show_count();
 	document.getElementById("div_end_div_team").innerHTML = document.getElementById("div_round_div_team").innerHTML;
 }
