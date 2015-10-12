@@ -1,0 +1,310 @@
+maxTime = 30;
+
+count_round = 3;
+
+rounds[0] = new Round();
+
+rounds[0].points[0] = 100;
+rounds[0].points[1] = 200;
+rounds[0].points[2] = 300;
+rounds[0].points[3] = 400;
+rounds[0].points[4] = 500;
+
+rounds[0].themes[0] = new Theme();
+rounds[0].themes[0].name = "Плевочки";
+
+rounds[0].themes[0].questions[0] = new Question();
+rounds[0].themes[0].questions[0].value = "Народная мудрость предостерегает от плевков в это гидротехническое сооружение";
+rounds[0].themes[0].questions[1] = new Question();
+rounds[0].themes[0].questions[1].value = "Не рекомендуется плевать против ЭТОГО";
+rounds[0].themes[0].questions[2] = new Question();
+rounds[0].themes[0].questions[2].value = "ЕЁ можно найти у стоматолога";
+rounds[0].themes[0].questions[3] = new Question();
+rounds[0].themes[0].questions[3].value = new Cat();
+rounds[0].themes[0].questions[3].value.theme = "Кончается на \"У\"";
+rounds[0].themes[0].questions[3].value.question1 = "Это животное является символом Австралии";
+rounds[0].themes[0].questions[3].value.question2 = "Это слово буквально означает \"важный человек\", он направляет и питает Пробуждение ученика";
+rounds[0].themes[0].questions[4] = new Question();
+rounds[0].themes[0].questions[4].value = "Эта ядовитая жаба способна выстреливать токсином в противника";
+
+rounds[0].themes[1] = new Theme();
+rounds[0].themes[1].name = "Перевёртыши";
+
+rounds[0].themes[1].questions[0] = new Question();
+rounds[0].themes[1].questions[0].value = "Ничего ни о чём";
+rounds[0].themes[1].questions[1] = new Question();
+rounds[0].themes[1].questions[1].value = "Ясные мысли пегого мерина в солнечный день";
+rounds[0].themes[1].questions[2] = new Question();
+rounds[0].themes[1].questions[2].value = "Изъявляю желание пополнять свой интеллектуальный багаж, в то же время не согласен стеснять себя узами брака";
+rounds[0].themes[1].questions[3] = new Question();
+rounds[0].themes[1].questions[3].value = "Скажите по-русски: \"The Prisoner of Castle Если\"";
+rounds[0].themes[1].questions[4] = new Question();
+rounds[0].themes[1].questions[4].value = "\"Объять бы сестрино лицо, да слепить уста поцелуем\"";
+
+rounds[0].themes[2] = new Theme();
+rounds[0].themes[2].name = "Послушайте";
+
+rounds[0].themes[2].questions[0] = new Question();
+rounds[0].themes[2].questions[0].value = "Если у вас плохой слух – виноват ЭТОТ хищник";
+rounds[0].themes[2].questions[1] = new Question();
+rounds[0].themes[2].questions[1].value = "Это – прибор для выслушивания внутренних органов";
+rounds[0].themes[2].questions[2] = new Question();
+rounds[0].themes[2].questions[2].value = "В России представители этой профессии, владеющие языком жестов, были вытеснены бегущей строкой";
+rounds[0].themes[2].questions[3] = new Question();
+rounds[0].themes[2].questions[3].value = "Чулпан Хаматова сыграла роль Риты в этом фильме Валерия Тодоровского";
+rounds[0].themes[2].questions[4] = new Question();
+rounds[0].themes[2].questions[4].value = "Это – фильм канадского режиссера Пола Линча 1986 года";
+
+rounds[0].themes[3] = new Theme();
+rounds[0].themes[3].name = "Профессии";
+
+rounds[0].themes[3].questions[0] = new Question();
+rounds[0].themes[3].questions[0].value = "С переходом судов на жидкое топливо ОНИ стали называться котельными машинистами.";
+rounds[0].themes[3].questions[1] = new Question();
+rounds[0].themes[3].questions[1].value = "Согласно мысли Авиценны, человек ЭТОЙ ПРОФЕССИИ должен обладать взглядом сокола, руками девушки, мудростью змеи и сердцем льва";
+rounds[0].themes[3].questions[2] = new Question();
+rounds[0].themes[3].questions[2].value = "Человек ЭТОЙ ПРОФЕССИИ \"как никто другой должен знать, что верить нельзя никому, даже себе\". Так говорил Мюллер.";
+rounds[0].themes[3].questions[3] = new Question();
+rounds[0].themes[3].questions[3].value = "\"Снип-снап-снурре, пурре-базелюрре! Разные люди бывают на свете: кузнецы, повара, доктора, школьники, аптекари, учителя, актеры, сторожа. А я вот — ...\". Далее идет именно ЭТО СЛОВО";
+rounds[0].themes[3].questions[4] = new Question();
+rounds[0].themes[3].questions[4].value = "Для названия ЭТОЙ ПРОФЕССИИ мы пользуемся французским словом, а вот чехи обычно называют ее \"porodnik\"";
+
+rounds[0].themes[4] = new Theme();
+rounds[0].themes[4].name = "Про насекомых";
+
+rounds[0].themes[4].questions[0] = new Question();
+rounds[0].themes[4].questions[0].value = "Именно там у сверчков расположены органы слуха";
+rounds[0].themes[4].questions[1] = new Question();
+rounds[0].themes[4].questions[1].value = "Именно этот жук является самым крупным жуком в мире";
+rounds[0].themes[4].questions[2] = new Question();
+rounds[0].themes[4].questions[2].value = "Своё название она получила из-за неправильного предположения о том, что она заползает в уши спящих людей";
+rounds[0].themes[4].questions[3] = new Question();
+rounds[0].themes[4].questions[3].value = "Некоторые клопы-хищницы получили название \"целующихся\" именно по этой причине";
+rounds[0].themes[4].questions[4] = new Question();
+rounds[0].themes[4].questions[4].value = "В случае опасности многоножка поступает именно так";
+
+rounds[0].themes[5] = new Theme();
+rounds[0].themes[5].name = "-Я";
+
+rounds[0].themes[5].questions[0] = new Question();
+rounds[0].themes[5].questions[0].value = "Париж – столица ЭТОЙ страны";
+rounds[0].themes[5].questions[1] = new Question();
+rounds[0].themes[5].questions[1].value = "День взятия ЕЁ - 14 июля 1789 года";
+rounds[0].themes[5].questions[2] = new Question();
+rounds[0].themes[5].questions[2].value = "Четырёхугольник, у которого ровно одна пара противолежащих сторон параллельна";
+rounds[0].themes[5].questions[3] = new Question();
+rounds[0].themes[5].questions[3].value = "Именно ТАМ находятся Дворец дожей и площадь Сан-Марко";
+rounds[0].themes[5].questions[4] = new Question();
+rounds[0].themes[5].questions[4].value = "Наука, исследующая размеры и форму Земли, её гравитационное поле, способы изображения земной поверхности на картах и планах";
+
+
+rounds[1] = new Round();
+
+rounds[1].points[0] = 200;
+rounds[1].points[1] = 400;
+rounds[1].points[2] = 600;
+rounds[1].points[3] = 800;
+rounds[1].points[4] = 1000;
+
+rounds[1].themes[0] = new Theme();
+rounds[1].themes[0].name = "Надрываясь";
+
+rounds[1].themes[0].questions[0] = new Question();
+rounds[1].themes[0].questions[0].value = "Этот мифический персонаж надрывался, вкатывая камень на гору";
+rounds[1].themes[0].questions[1] = new Question();
+rounds[1].themes[0].questions[1].value = "ТАКИМ бывает, например, смех или крик";
+rounds[1].themes[0].questions[2] = new Question();
+rounds[1].themes[0].questions[2].value = "Гребцы надрывались на этих парусно-вёсельных военных кораблях";
+rounds[1].themes[0].questions[3] = new Question();
+rounds[1].themes[0].questions[3].value = "ОНИ за своё преступление были осуждены в Аиде наполнять водой бездонную бочку";
+rounds[1].themes[0].questions[4] = new Question();
+rounds[1].themes[0].questions[4].value = "ОН с 1927 г. работал на шахте \"Центральная-Ирмино\" в Кадиевке, Донбасс";
+
+rounds[1].themes[1] = new Theme();
+rounds[1].themes[1].name = "Звёзды зажигают";
+
+rounds[1].themes[1].questions[0] = new Question();
+rounds[1].themes[1].questions[0].value = "ОНО - типичная звезда спектрального класса G";
+rounds[1].themes[1].questions[1] = new Question();
+rounds[1].themes[1].questions[1].value = "Песня Александра Рыбака, победившего на Евровидении-2009 называется \"Fairytale\". На русский переведите";
+rounds[1].themes[1].questions[2] = new Question();
+rounds[1].themes[1].questions[2].value = "Именно ТАКИЕ реакции происходят в недрах звёзд";
+rounds[1].themes[1].questions[3] = new Question();
+rounds[1].themes[1].questions[3].value = "Звёзды, испытавшие гравитационный коллапс, становятся ими";
+rounds[1].themes[1].questions[4] = new Question();
+rounds[1].themes[1].questions[4].value = "ОН входит в тройку самых богатых мёртвых звёзд, а недавно на экраны вышел фильм \"Вот и всё\" о ЕГО последних репетициях";
+
+rounds[1].themes[2] = new Theme();
+rounds[1].themes[2].name = "Лес";
+
+rounds[1].themes[2].questions[0] = new Question();
+rounds[1].themes[2].questions[0].value = "В этом лесу обитал Робин Гуд";
+rounds[1].themes[2].questions[1] = new Question();
+rounds[1].themes[2].questions[1].value = "Влажные тропические леса делятся на сельву, гилею и ИХ";
+rounds[1].themes[2].questions[2] = new Question();
+rounds[1].themes[2].questions[2].value = "После Второй мировой войны обширные лесные районы Южной Америки также были местами действия крупных партизанских соединений. Дальше в Википедии упоминается ЭТО имя";
+rounds[1].themes[2].questions[3] = new Question();
+rounds[1].themes[2].questions[3].value = "Галадриэль была владычицей ЭТОГО леса";
+rounds[1].themes[2].questions[4] = new Question();
+rounds[1].themes[2].questions[4].value = "В 1991 году было подписано Беловежское соглашение. Именно в ЭТОЙ резиденции";
+
+rounds[1].themes[3] = new Theme();
+rounds[1].themes[3].name = "Фобии";
+
+rounds[1].themes[3].questions[0] = new Question();
+rounds[1].themes[3].questions[0].value = "Боязнь этого называется трискайдекафобия";
+rounds[1].themes[3].questions[1] = new Question();
+rounds[1].themes[3].questions[1].value = "Именно так называется страх перед страхами";
+rounds[1].themes[3].questions[2] = new Question();
+rounds[1].themes[3].questions[2].value = "У Гоголя, по отзывам современников, наблюдались признаки тафефобии — боязни именно этого";
+rounds[1].themes[3].questions[3] = new Question();
+rounds[1].themes[3].questions[3].value = "Копофобия — это вовсе не страх перед полицейскими, а боязнь этого";
+rounds[1].themes[3].questions[4] = new Question();
+rounds[1].themes[3].questions[4].value = "Именно этой боязнью определенных животных страдал Наполеон Бонапарт";
+
+rounds[1].themes[4] = new Theme();
+rounds[1].themes[4].name = "Анаграммы";
+
+rounds[1].themes[4].questions[0] = new Question();
+rounds[1].themes[4].questions[0].value = "Маленький стол и маленький лист";
+rounds[1].themes[4].questions[1] = new Question();
+rounds[1].themes[4].questions[1].value = "Шум волн и усыпальница";
+rounds[1].themes[4].questions[2] = new Question();
+rounds[1].themes[4].questions[2].value = "Вид поощрения и историческая область в Испании";
+rounds[1].themes[4].questions[3] = new Question();
+rounds[1].themes[4].questions[3].value = "Единица расстояния и острая приправа";
+rounds[1].themes[4].questions[4] = new Question();
+rounds[1].themes[4].questions[4].value = "Лекарственная форма и действие, которое она может оказать";
+
+rounds[1].themes[5] = new Theme();
+rounds[1].themes[5].name = "Сленг";
+
+rounds[1].themes[5].questions[0] = new Question();
+rounds[1].themes[5].questions[0].value = "Скажите \"разговаривать на блатном языке\"";
+rounds[1].themes[5].questions[1] = new Question();
+rounds[1].themes[5].questions[1].value = "Фамилию какого немецкого композитора 18 века представители современной \"интеллектуальной молодежи\" приняли бы за слово \"видение\"?";
+rounds[1].themes[5].questions[2] = new Question();
+rounds[1].themes[5].questions[2].value = "Люди какой профессии говорят словосочетание \"персидский правитель\" и \"неприличное слово\"?";
+rounds[1].themes[5].questions[3] = new Question();
+rounds[1].themes[5].questions[3].value = "Этим французским словом Даль заменяет название циркона";
+rounds[1].themes[5].questions[4] = new Question();
+rounds[1].themes[5].questions[4].value = "Добавьте букву к английскому слову \"language\", чтоб получилось шутливое название сленга";
+
+
+rounds[2] = new Round();
+
+rounds[2].points[0] = 300;
+rounds[2].points[1] = 600;
+rounds[2].points[2] = 900;
+rounds[2].points[3] = 1200;
+rounds[2].points[4] = 1500;
+
+rounds[2].themes[0] = new Theme();
+rounds[2].themes[0].name = "Вышел";
+
+rounds[2].themes[0].questions[0] = new Question();
+rounds[2].themes[0].questions[0].value = "Слово \"exit\" указывает именно на это";
+rounds[2].themes[0].questions[1] = new Question();
+rounds[2].themes[0].questions[1].value = "Этот альбом группы \"Сплин\" содержит песню \"Выхода нет\"";
+rounds[2].themes[0].questions[2] = new Question();
+rounds[2].themes[0].questions[2].value = new Cat();
+rounds[2].themes[0].questions[2].value.theme = "Ужасное далёко";
+rounds[2].themes[0].questions[2].value.question1 = "Романы о Чернобыльской зоне издаются в серии с ТАКИМ названием";
+rounds[2].themes[0].questions[2].value.question2 = "Именно ЕГО перу принадлежит роман \"1984\"";
+rounds[2].themes[0].questions[3] = new Question();
+rounds[2].themes[0].questions[3].value = "\"Ах, как бы чего не вышло!\" восклицал герой этого рассказа А. П. Чехова";
+rounds[2].themes[0].questions[4] = new Question();
+rounds[2].themes[0].questions[4].value = "Статья о постановке театра Вахтангова по мотивам мультфильма Нортштейна была озаглавлена именно так";
+
+rounds[2].themes[1] = new Theme();
+rounds[2].themes[1].name = "<span style='font-size:42px;'>Вымышленные существа</span>";
+
+rounds[2].themes[1].questions[0] = new Question();
+rounds[2].themes[1].questions[0].value = "ОН может появиться из яйца, снесенного петухом или высиженного жабой";
+rounds[2].themes[1].questions[1] = new Question();
+rounds[2].themes[1].questions[1].value = "ОНИ – духи земли и гор, бородатые карлики с грубыми и смешными чертами лица";
+rounds[2].themes[1].questions[2] = new Question();
+rounds[2].themes[1].questions[2].value = "Это существо – гибрид коня и грифа";
+rounds[2].themes[1].questions[3] = new Question();
+rounds[2].themes[1].questions[3].value = "Это растение граничит с животным царством, ибо, когда его вырывают с корнем, оно кричит";
+rounds[2].themes[1].questions[4] = new Question();
+rounds[2].themes[1].questions[4].value = "ОНИ – птицы с лицами дев, крючковатыми когтями и нечистым брюхом, пожирающие и портящие яства";
+
+rounds[2].themes[2] = new Theme();
+rounds[2].themes[2].name = "12 стульев";
+
+rounds[2].themes[2].questions[0] = new Question();
+rounds[2].themes[2].questions[0].value = "Именно они написали произведение, ставшее названием темы";
+rounds[2].themes[2].questions[1] = new Question();
+rounds[2].themes[2].questions[1].value = "Войдя в Старгород со стороны деревни Чмаровки, Великий комбинатор держал в руках ЭТО";
+rounds[2].themes[2].questions[2] = new Question();
+rounds[2].themes[2].questions[2].value = "По мнению Остапа Бендера всю контрабанду делают в этом городе";
+rounds[2].themes[2].questions[3] = new Question();
+rounds[2].themes[2].questions[3].value = "Он - гигант мысли, отец русской демократии и особа, приближенная к императору";
+rounds[2].themes[2].questions[4] = new Question();
+rounds[2].themes[2].questions[4].value = "В этом году вышло первое книжное издание романа";
+
+rounds[2].themes[3] = new Theme();
+rounds[2].themes[3].name = "<span style='font-size:46px;'>Бомбы разные важны</span>";
+
+rounds[2].themes[3].questions[0] = new Question();
+rounds[2].themes[3].questions[0].value = "Именно благодаря ей советская физика избежала печальной участи советской биологии";
+rounds[2].themes[3].questions[1] = new Question();
+rounds[2].themes[3].questions[1].value = "Именно этого англичанина однажды назвали \"мистер Бомб\"";
+rounds[2].themes[3].questions[2] = new Question();
+rounds[2].themes[3].questions[2].value = "Именно эта \"бомба\" вошла в терминологию после выхода фильма \"Челюсти\"";
+rounds[2].themes[3].questions[3] = new Question();
+rounds[2].themes[3].questions[3].value = "Именно этот художник пытался организовать Институт по изучению атомной бомбы в отношении искусства";
+rounds[2].themes[3].questions[4] = new Question();
+rounds[2].themes[3].questions[4].value = new Cat();
+rounds[2].themes[3].questions[4].value.theme = "Звёзды Голливуда";
+rounds[2].themes[3].questions[4].value.question1 = "В 1980-е это один из самых популярных мужчин-актёров Голливуда, особым успехом пользовался фильм \"Красотка\" с ним в главной роли";
+rounds[2].themes[3].questions[4].value.question2 = "Одна из самых известных ролей этого актёра роль дона Карлеоне в фильме Ф.Ф. Копполы \"Крёстный отец\"";
+
+rounds[2].themes[4] = new Theme();
+rounds[2].themes[4].name = "Стрела";
+
+rounds[2].themes[4].questions[0] = new Question();
+rounds[2].themes[4].questions[0].value = "На одной карикатуре этот стрелок изображён делающим контрольный выстрел в голову, хотя и предыдущий достиг цели";
+rounds[2].themes[4].questions[1] = new Question();
+rounds[2].themes[4].questions[1].value = "На звёздной карте Южного полушария Стрела находится между этими зодиакальными созвездиями, начинающимися на одну букву";
+rounds[2].themes[4].questions[2] = new Question();
+rounds[2].themes[4].questions[2].value = "Именно для этого фильма режиссёра В. Тарасова Владимир Высоцкий написал цикл баллад";
+rounds[2].themes[4].questions[3] = new Question();
+rounds[2].themes[4].questions[3].value = "В старину стрелы с тупыми костяными или деревянными наконечниками использовали, когда охотились на такого зверя";
+rounds[2].themes[4].questions[4] = new Question();
+rounds[2].themes[4].questions[4].value = "Легендарного футболиста Альфредо ди Стефано назвали \"стрелой\" именно такого цвета";
+
+rounds[2].themes[5] = new Theme();
+rounds[2].themes[5].name = "<span style='font-size:46px;'>Суров закон, но закон</span>";
+
+rounds[2].themes[5].questions[0] = new Question();
+rounds[2].themes[5].questions[0].value = "Считается, что для ЭТИХ ЛЮДЕЙ закон не писан";
+rounds[2].themes[5].questions[1] = new Question();
+rounds[2].themes[5].questions[1].value = "ОН обычно противостоит прокурору";
+rounds[2].themes[5].questions[2] = new Question();
+rounds[2].themes[5].questions[2].value = "ТАК на латыни звучит пословица, давшая название теме";
+rounds[2].themes[5].questions[3] = new Question();
+rounds[2].themes[5].questions[3].value = "ТАК расшифровывается аббревиатура \"УПК\"";
+rounds[2].themes[5].questions[4] = new Question();
+rounds[2].themes[5].questions[4].value = "С XII века в процесс канонизации святых в Ватикане вводятся два новых действующих духовных лица. Один перечислял достоинства канонизируемого, другой — его недостатки. Эти должности называются ТАК";
+
+
+teams[0] = new Team();
+teams[0].name = "Экипаж 1";
+teams[0].points = 0;
+teams[1] = new Team();
+teams[1].name = "Экипаж 2";
+teams[1].points = 0;
+teams[2] = new Team();
+teams[2].name = "Экипаж 3";
+teams[2].points = 0;
+teams[3] = new Team();
+teams[3].name = "Экипаж 4";
+teams[3].points = 0;
+teams[4] = new Team();
+teams[4].name = "Экипаж 5";
+teams[4].points = 0;
+teams[5] = new Team();
+teams[5].name = "Экипаж 6";
+teams[5].points = 0;
